@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kessia TONA — Business &amp; Data Analyst</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&amp;family=Inter:wght@400;500;600&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#FBFBF9; --fg:#1A1D21; --muted:#5C6168; --line:#E2E1DC;
+  --accent:#2F4B5C; --accent-soft:#EDF0F1; --card:#FFFFFF;
+  --ph:#EEEDE9; --ph-line:#DFDDD7;
+}
+:root[data-theme="dark"]{
+  --bg:#14161A; --fg:#F2F1ED; --muted:#9AA0A8; --line:#2A2E34;
+  --accent:#9DC4D4; --accent-soft:#1E262B; --card:#1A1D22;
+  --ph:#1E2126; --ph-line:#2A2E34;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:Inter,system-ui,sans-serif}
+a{color:var(--accent);text-decoration-thickness:1px;text-underline-offset:3px}
+a:hover{color:var(--fg)}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:2px}
+[data-reveal]{opacity:0;transform:translateY(16px);transition:opacity .7s ease,transform .7s ease}
+[data-reveal].is-in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  [data-reveal]{opacity:1;transform:none;transition:none}
+}
+</style>
+</helmet>
+
+<div style="min-height:100vh;background:var(--bg);color:var(--fg);font-size:17px;line-height:1.65">
+
+  <header style="position:sticky;top:0;z-index:20;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;padding:16px clamp(20px,5vw,72px);background:color-mix(in oklab, var(--bg) 88%, transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)">
+    <a href="#accueil" style="font-family:'Instrument Serif',Georgia,serif;font-size:22px;letter-spacing:.01em;color:var(--fg);text-decoration:none">Kessia&nbsp;TONA</a>
+    <nav style="display:flex;align-items:center;gap:clamp(14px,2vw,28px);flex-wrap:wrap;font-size:15px">
+      <a href="#projets" style="color:var(--muted);text-decoration:none">Projets</a>
+      <a href="#competences" style="color:var(--muted);text-decoration:none">Compétences</a>
+      <a href="#parcours" style="color:var(--muted);text-decoration:none">Parcours</a>
+      <a href="#contact" style="color:var(--muted);text-decoration:none">Contact</a>
+      <a href="/cv-kessia-tona.pdf" download="" style="padding:7px 14px;border:1px solid var(--line);border-radius:999px;color:var(--fg);text-decoration:none">Télécharger mon CV</a>
+      <button type="button" onClick="{{ toggleTheme }}" aria-label="Basculer le mode sombre" title="Basculer le mode sombre" style="display:flex;align-items:center;gap:8px;padding:7px 12px;border:1px solid var(--line);border-radius:999px;background:transparent;color:var(--muted);font-family:'IBM Plex Mono',monospace;font-size:12px;cursor:pointer">{{ themeLabel }}</button>
+    </nav>
+  </header>
+
+  <sc-if value="{{ isHome }}" hint-placeholder-val="{{ true }}">
+  <main id="accueil">
+
+    <section style="padding:clamp(64px,11vw,150px) clamp(20px,5vw,72px) clamp(48px,7vw,96px);max-width:1400px;margin:0 auto">
+      <p style="display:inline-flex;align-items:center;gap:9px;margin:0 0 28px;padding:6px 14px;border:1px solid var(--line);border-radius:999px;font-family:'IBM Plex Mono',monospace;font-size:12.5px;letter-spacing:.04em;text-transform:uppercase;color:var(--muted)">
+        <span style="width:7px;height:7px;border-radius:50%;background:var(--accent)"></span>Disponible pour septembre 2026
+      </p>
+      <h1 style="font-family:'Instrument Serif',Georgia,serif;font-weight:400;font-size:clamp(2.9rem,8.5vw,6.4rem);line-height:1.02;letter-spacing:-.02em;margin:0 0 22px;max-width:16ch;text-wrap:balance">Business &amp; Data Analyst</h1>
+      <p style="max-width:62ch;font-size:clamp(18px,2.1vw,22px);line-height:1.55;margin:0 0 18px;color:var(--fg);text-wrap:pretty">Je transforme des données brutes et désordonnées en indicateurs que des décideurs non-techniques utilisent réellement.</p>
+      <p style="max-width:66ch;margin:0 0 40px;color:var(--muted);text-wrap:pretty">Je pars de la question métier, pas de l'outil. Mon différenciant : je sais aussi construire le modèle prédictif et l'interface quand le tableau de bord ne suffit plus. Étudiante en M2 Data Science &amp; Business Intelligence à Epitech Digital Bordeaux, en recherche d'un poste de Business Analyst / Data Analyst à Bordeaux ou en remote.</p>
+      <ul style="display:flex;flex-wrap:wrap;gap:10px 28px;margin:0;padding:0;list-style:none;font-size:15.5px">
+        <li><a href="mailto:kessia.tona@outlook.com">kessia.tona@outlook.com</a></li>
+        <li><a href="tel:+33674700295">+33 6 74 70 02 95</a></li>
+        <li><a href="https://www.linkedin.com/in/kessiatona" target="_blank" rel="noopener">LinkedIn @kessiatona</a></li>
+        <li><a href="https://github.com/Kess4" target="_blank" rel="noopener">github.com/Kess4</a></li>
+      </ul>
+    </section>
+
+    <section id="projets" style="padding:clamp(40px,6vw,80px) clamp(20px,5vw,72px);max-width:1400px;margin:0 auto">
+      <h2 style="font-family:'IBM Plex Mono',monospace;font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:500;margin:0 0 32px;padding-bottom:14px;border-bottom:1px solid var(--line)">Projets sélectionnés</h2>
+
+      <a href="#/projet/dashboard-rse-conformite" data-reveal="" style="display:block;text-decoration:none;color:inherit;margin-bottom:clamp(20px,2.5vw,32px)">
+        <div style="overflow:hidden;border-radius:10px;box-shadow:0 8px 30px rgba(20,22,26,.09);background:var(--ph)">
+          <div style="aspect-ratio:16/9;display:grid;place-items:center;padding:clamp(12px,2vw,28px);background:var(--accent-soft);transition:transform .5s ease" data-zoom="">
+            <img src="images/dashboard-rse-conformite/cover.png" alt="Dashboard Zoho Analytics de conformité produits : podium des candidats, taux de conformité et répartition conforme / non conforme." width="1410" height="863" loading="lazy" decoding="async" style="display:block;width:100%;height:100%;object-fit:contain;border-radius:4px">
+          </div>
+        </div>
+        <div style="display:flex;flex-wrap:wrap;align-items:baseline;gap:8px 18px;margin-top:22px">
+          <h3 style="font-family:'Instrument Serif',Georgia,serif;font-weight:400;font-size:clamp(1.7rem,3.4vw,2.6rem);line-height:1.15;margin:0">Dashboard RSE &amp; conformité produits</h3>
+          <span style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent)">Projet phare · ExNihilo</span>
+        </div>
+        <p style="max-width:68ch;margin:10px 0 14px;color:var(--muted);text-wrap:pretty">Comment permettre à une direction de suivre la conformité et les indicateurs RSE de ses produits sans passer par un analyste ?</p>
+        <ul style="display:flex;flex-wrap:wrap;gap:8px;margin:0;padding:0;list-style:none">
+          <li style="padding:5px 11px;border-radius:4px;background:var(--accent-soft);color:var(--accent);font-family:'IBM Plex Mono',monospace;font-size:12px">Excel</li>
+          <li style="padding:5px 11px;border-radius:4px;background:var(--accent-soft);color:var(--accent);font-family:'IBM Plex Mono',monospace;font-size:12px">Power BI</li>
+          <li style="padding:5px 11px;border-radius:4px;background:var(--accent-soft);color:var(--accent);font-family:'IBM Plex Mono',monospace;font-size:12px">Zoho Analytics</li>
+        </ul>
+      </a>
+
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:clamp(24px,3.5vw,44px)">
+
+        <a href="#/projet/decrochage-consulting" data-reveal="" style="display:block;text-decoration:none;color:inherit">
+          <div style="overflow:hidden;border-radius:10px;box-shadow:0 6px 24px rgba(20,22,26,.08);background:var(--ph)">
+            <div style="aspect-ratio:4/3;display:grid;place-items:center;padding:clamp(12px,2.4vw,26px);background:var(--accent-soft);transition:transform .5s ease" data-zoom="">
+              <img src="images/decrochage-consulting/cover.png" alt="Vue d'ensemble de l'outil de prédiction du risque de décrochage : répartition par niveau de risque et risque moyen par programme." width="1735" height="989" loading="lazy" decoding="async" style="display:block;width:100%;height:100%;object-fit:contain;border-radius:4px">
+            </div>
+          </div>
+          <h3 style="font-family:'Instrument Serif',Georgia,serif;font-weight:400;font-size:clamp(1.4rem,2.4vw,1.9rem);line-height:1.2;margin:20px 0 8px">Décrochage Consulting</h3>
+          <p style="max-width:60ch;margin:0 0 14px;color:var(--muted);font-size:16px;text-wrap:pretty">Comment repérer assez tôt les élèves à risque de décrochage pour que les équipes pédagogiques puissent agir ?</p>
+          <ul style="display:flex;flex-wrap:wrap;gap:8px;margin:0;padding:0;list-style:none">
+            <li style="padding:5px 11px;border-radius:4px;background:var(--accent-soft);color:var(--accent);font-family:'IBM Plex Mono',monospace;font-size:12px">Python</li>
+            <li style="padding:5px 11px;border-radius:4px;background:var(--accent-soft);color:var(--accent);font-family:'IBM Plex Mono',monospace;font-size:12px">Machine Learning</li>
+            <li style="padding:5px 11px;border-radius:4px;background:var(--accent-soft);color:var(--accent);font-family:'IBM Plex Mono',monospace;font-size:12px">Streamlit</li>
+          </ul>
+        </a>
+
+        <a href="#/projet/smart-care" data-reveal="" style="display:block;text-decoration:none;color:inherit">
+          <div style="overflow:hidden;border-radius:10px;box-shadow:0 6px 24px rgba(20,22,26,.08);background:var(--ph)">
+            <div style="aspect-ratio:4/3;display:grid;place-items:center;padding:clamp(12px,2.4vw,26px);background:var(--accent-soft);transition:transform .5s ease" data-zoom="">
+              <img src="images/smart-care/cover.png" alt="Interface Smart Care Analytics, onglet Flux : admissions, sorties et historique entrées / sorties du service des urgences." width="1999" height="1197" loading="lazy" style="display:block;width:100%;height:100%;object-fit:contain;border-radius:4px">
+            </div>
+          </div>
+          <h3 style="font-family:'Instrument Serif',Georgia,serif;font-weight:400;font-size:clamp(1.4rem,2.4vw,1.9rem);line-height:1.2;margin:20px 0 8px">Smart Care</h3>
+          <p style="max-width:60ch;margin:0 0 14px;color:var(--muted);font-size:16px;text-wrap:pretty">Comment anticiper les tensions sur les ressources d'un hôpital, lit par lit et service par service ?</p>
+          <ul style="display:flex;flex-wrap:wrap;gap:8px;margin:0;padding:0;list-style:none">
+            <li style="padding:5px 11px;border-radius:4px;background:var(--accent-soft);color:var(--accent);font-family:'IBM Plex Mono',monospace;font-size:12px">Python</li>
+            <li style="padding:5px 11px;border-radius:4px;background:var(--accent-soft);color:var(--accent);font-family:'IBM Plex Mono',monospace;font-size:12px">Machine Learning</li>
+            <li style="padding:5px 11px;border-radius:4px;background:var(--accent-soft);color:var(--accent);font-family:'IBM Plex Mono',monospace;font-size:12px">Dataviz</li>
+          </ul>
+        </a>
+
+        <a href="#/projet/ctrl-f" data-reveal="" style="display:block;text-decoration:none;color:inherit">
+          <div style="overflow:hidden;border-radius:10px;box-shadow:0 6px 24px rgba(20,22,26,.08);background:var(--ph)">
+            <div style="aspect-ratio:4/3;display:grid;place-items:center;padding:clamp(12px,2.4vw,26px);background:var(--accent-soft);transition:transform .5s ease" data-zoom="">
+              <img src="images/ctrl-f/cover.png" alt="Accueil de Ctrl+F : fil d'actualités en cartes, filtré par rubrique." width="1738" height="988" loading="lazy" decoding="async" style="display:block;width:100%;height:100%;object-fit:contain;border-radius:4px">
+            </div>
+          </div>
+          <h3 style="font-family:'Instrument Serif',Georgia,serif;font-weight:400;font-size:clamp(1.4rem,2.4vw,1.9rem);line-height:1.2;margin:20px 0 8px">Ctrl+F</h3>
+          <p style="max-width:60ch;margin:0 0 14px;color:var(--muted);font-size:16px;text-wrap:pretty">Comment réduire le temps passé à trier l'actualité tech sans rien manquer d'important ?</p>
+          <ul style="display:flex;flex-wrap:wrap;gap:8px;margin:0;padding:0;list-style:none">
+            <li style="padding:5px 11px;border-radius:4px;background:var(--accent-soft);color:var(--accent);font-family:'IBM Plex Mono',monospace;font-size:12px">Next.js</li>
+            <li style="padding:5px 11px;border-radius:4px;background:var(--accent-soft);color:var(--accent);font-family:'IBM Plex Mono',monospace;font-size:12px">IA générative</li>
+            <li style="padding:5px 11px;border-radius:4px;background:var(--accent-soft);color:var(--accent);font-family:'IBM Plex Mono',monospace;font-size:12px">Vercel</li>
+          </ul>
+        </a>
+
+        <a href="#/projet/rosa" data-reveal="" style="display:block;text-decoration:none;color:inherit">
+          <div style="overflow:hidden;border-radius:10px;box-shadow:0 6px 24px rgba(20,22,26,.08);background:var(--ph)">
+            <div style="aspect-ratio:4/3;display:grid;place-items:center;padding:clamp(14px,3vw,34px);background:var(--accent-soft);transition:transform .5s ease" data-zoom="">
+              <img src="images/rosa/cover.png" alt="Trois écrans de l'application RoSa : carte des zones à risque, écran d'accueil et présentation du service." loading="lazy" style="display:block;width:100%;height:100%;object-fit:contain">
+            </div>
+          </div>
+          <h3 style="font-family:'Instrument Serif',Georgia,serif;font-weight:400;font-size:clamp(1.4rem,2.4vw,1.9rem);line-height:1.2;margin:20px 0 8px">RoSa — Road Safety Application</h3>
+          <p style="max-width:60ch;margin:0 0 14px;color:var(--muted);font-size:16px;text-wrap:pretty">Comment permettre à des agents municipaux de déclarer, localiser et suivre les accidents depuis une seule interface ?</p>
+          <ul style="display:flex;flex-wrap:wrap;gap:8px;margin:0;padding:0;list-style:none">
+            <li style="padding:5px 11px;border-radius:4px;background:var(--accent-soft);color:var(--accent);font-family:'IBM Plex Mono',monospace;font-size:12px">React Native</li>
+            <li style="padding:5px 11px;border-radius:4px;background:var(--accent-soft);color:var(--accent);font-family:'IBM Plex Mono',monospace;font-size:12px">Expo</li>
+            <li style="padding:5px 11px;border-radius:4px;background:var(--accent-soft);color:var(--accent);font-family:'IBM Plex Mono',monospace;font-size:12px">PostgreSQL</li>
+          </ul>
+        </a>
+
+      </div>
+    </section>
+
+    <section id="competences" style="padding:clamp(56px,7vw,100px) clamp(20px,5vw,72px);max-width:1400px;margin:0 auto">
+      <h2 style="font-family:'IBM Plex Mono',monospace;font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:500;margin:0 0 32px;padding-bottom:14px;border-bottom:1px solid var(--line)">Compétences</h2>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:clamp(28px,4vw,56px)" data-reveal="">
+        <div>
+          <h3 style="font-family:'Instrument Serif',Georgia,serif;font-weight:400;font-size:1.6rem;margin:0 0 18px">Analyse &amp; BI</h3>
+          <ul style="margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:9px;color:var(--muted);font-size:16.5px">
+            <li>SQL</li><li>PostgreSQL</li><li>Power BI</li><li>Zoho Analytics</li><li>Looker</li><li>Tableau</li><li>Excel avancé</li><li>Modélisation de données</li>
+          </ul>
+        </div>
+        <div>
+          <h3 style="font-family:'Instrument Serif',Georgia,serif;font-weight:400;font-size:1.6rem;margin:0 0 18px">Data &amp; IA</h3>
+          <ul style="margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:9px;color:var(--muted);font-size:16.5px">
+            <li>Python</li><li>R</li><li>Machine Learning</li><li>NLP</li><li>Streamlit</li><li>Automatisation de collecte de données</li>
+          </ul>
+        </div>
+        <div>
+          <h3 style="font-family:'Instrument Serif',Georgia,serif;font-weight:400;font-size:1.6rem;margin:0 0 18px">Méthodes &amp; Outils</h3>
+          <ul style="margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:9px;color:var(--muted);font-size:16.5px">
+            <li>Cadrage du besoin</li><li>Restitution à des décideurs non-techniques</li><li>Gestion de projet</li><li>Jira / Trello</li><li>Notion</li><li>Figma</li><li>Google Cloud</li><li>AWS</li><li>ELK</li><li>Microsoft Dynamics</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="parcours" style="padding:clamp(56px,7vw,100px) clamp(20px,5vw,72px);max-width:1400px;margin:0 auto">
+      <h2 style="font-family:'IBM Plex Mono',monospace;font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:500;margin:0 0 40px;padding-bottom:14px;border-bottom:1px solid var(--line)">Parcours</h2>
+      <ol style="margin:0;padding:0 0 0 clamp(18px,2.5vw,28px);list-style:none;border-left:1px solid var(--line);display:flex;flex-direction:column;gap:clamp(34px,4vw,52px);max-width:80ch">
+        <li data-reveal="" style="position:relative">
+          <span style="position: absolute; left: calc(-1 * clamp(18px,2.5vw,28px) - 4.5px); top: 11px; width: 9px; height: 9px; border-radius: 50%; background-color: #FBFBF9; border-width: 1px; border-style: solid; border-color: #2F4B5C"></span>
+          <p style="margin:0 0 6px;font-family:'IBM Plex Mono',monospace;font-size:12.5px;letter-spacing:.06em;color:var(--accent)">Janv. 2024 – aujourd'hui</p>
+          
+          <h3 style="font-family:'Instrument Serif',Georgia,serif;font-weight:400;font-size:1.55rem;margin:0 0 4px">Data Scientist, alternance</h3><p style="margin:0 0 10px;font-size:15.5px;color:var(--fg)">IDAIA Group — équipe R&amp;D</p>
+          <p style="margin:0;max-width:68ch;color:var(--muted);text-wrap:pretty">Intégration de modèles IA dans les processus R&amp;D ; suivi et amélioration continue des indicateurs de performance.</p>
+        </li>
+        <li data-reveal="" style="position:relative">
+          <span style="position: absolute; left: calc(-1 * clamp(18px,2.5vw,28px) - 4.5px); top: 11px; width: 9px; height: 9px; border-radius: 50%; background-color: #2F4B5C"></span>
+          <p style="margin:0 0 6px;font-family:'IBM Plex Mono',monospace;font-size:12.5px;letter-spacing:.06em;color:var(--accent)">Févr. – oct. 2025</p>
+          <h3 style="font-family:'Instrument Serif',Georgia,serif;font-weight:400;font-size:1.55rem;margin:0 0 4px">Analyst &amp; Data Viz, freelance</h3>
+          <p style="margin:0 0 10px;font-size:15.5px;color:var(--fg)">ExNihilo</p>
+          <p style="margin:0;max-width:68ch;color:var(--muted);text-wrap:pretty">Nettoyage et fiabilisation de données produits, modélisation, puis dashboards Power BI et Zoho Analytics pour la direction. Analyses RSE et conformité produits.</p>
+        </li>
+        <li data-reveal="" style="position:relative">
+          <span style="position: absolute; left: calc(-1 * clamp(18px,2.5vw,28px) - 4.5px); top: 11px; width: 9px; height: 9px; border-radius: 50%; background-color: #2F4B5C"></span>
+          <p style="margin:0 0 6px;font-family:'IBM Plex Mono',monospace;font-size:12.5px;letter-spacing:.06em;color:var(--accent)">Févr. – juin 2023</p>
+          <h3 style="font-family:'Instrument Serif',Georgia,serif;font-weight:400;font-size:1.55rem;margin:0 0 4px">Data Analyst, stage</h3>
+          <p style="margin:0 0 10px;font-size:15.5px;color:var(--fg)">IDAIA Group — équipe R&amp;D</p>
+          <p style="margin:0;max-width:68ch;color:var(--muted);text-wrap:pretty">Fiabilisation des données DVF, audit et restructuration de l'entrepôt SQL, automatisation de la collecte web.</p>
+        </li>
+        <li data-reveal="" style="position:relative">
+          <span style="position: absolute; left: calc(-1 * clamp(18px,2.5vw,28px) - 4.5px); top: 11px; width: 9px; height: 9px; border-radius: 50%; background-color: #2F4B5C"></span>
+          <p style="margin:0 0 6px;font-family:'IBM Plex Mono',monospace;font-size:12.5px;letter-spacing:.06em;color:var(--muted)">Formation</p>
+          <h3 style="font-family:'Instrument Serif',Georgia,serif;font-weight:400;font-size:1.55rem;margin:0 0 10px">Epitech Digital Bordeaux — M2 Data Science &amp; Business Intelligence, 2021-2026</h3>
+          <p style="margin:0;max-width:68ch;color:var(--muted);text-wrap:pretty">EFE Montaigne (Bénin), Bac SES/Physique mention AB, 2021.</p>
+        </li>
+      </ol>
+    </section>
+
+    <footer id="contact" style="margin-top:clamp(40px,6vw,80px);padding:clamp(56px,7vw,96px) clamp(20px,5vw,72px);border-top:1px solid var(--line);background:var(--accent-soft)">
+      <div style="max-width:1400px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:clamp(28px,4vw,56px);align-items:start">
+        <div>
+          <h2 style="font-family:'Instrument Serif',Georgia,serif;font-weight:400;font-size:clamp(2rem,4.5vw,3.2rem);line-height:1.1;margin:0 0 14px;max-width:22ch">Parlons de votre besoin en données.</h2>
+          <p style="margin:0;max-width:52ch;color:var(--muted);text-wrap:pretty">Disponible pour un poste de Business Analyst / Data Analyst à partir de septembre 2026, à Bordeaux ou en remote.</p>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:12px;font-size:16.5px">
+          <a href="mailto:kessia.tona@outlook.com">kessia.tona@outlook.com</a>
+          <a href="tel:+33674700295">+33 6 74 70 02 95</a>
+          <a href="https://www.linkedin.com/in/kessia-tona/" target="_blank" rel="noopener">LinkedIn @kessiatona</a>
+          <a href="https://github.com/Kess4" target="_blank" rel="noopener">github.com/Kess4</a>
+          <a href="/cv-kessia-tona.pdf" download="" style="margin-top:8px;align-self:flex-start;padding:10px 18px;border:1px solid var(--accent);border-radius:999px;text-decoration:none">Télécharger mon CV (PDF)</a>
+        </div>
+      </div>
+      <p style="max-width:1400px;margin:clamp(40px,5vw,64px) auto 0;font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--muted)">© 2026 Kessia Tona</p>
+    </footer>
+
+  </main>
+  </sc-if>
+
+  <sc-if value="{{ isProject }}" hint-placeholder-val="{{ false }}">
+  <main>
+    <article style="padding:clamp(40px,6vw,80px) clamp(20px,5vw,72px) 0;max-width:1400px;margin:0 auto">
+      <a href="#projets" style="display:inline-block;margin-bottom:clamp(28px,4vw,44px);font-family:'IBM Plex Mono',monospace;font-size:12.5px;letter-spacing:.06em;text-decoration:none">← Tous les projets</a>
+      <p style="margin:0 0 14px;font-family:'IBM Plex Mono',monospace;font-size:12.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent)">{{ p.kicker }}</p>
+      <h1 style="font-family:'Instrument Serif',Georgia,serif;font-weight:400;font-size:clamp(2.3rem,6vw,4.4rem);line-height:1.05;letter-spacing:-.02em;margin:0 0 20px;max-width:24ch;text-wrap:balance">{{ p.title }}</h1>
+      <div style="display:flex;flex-wrap:wrap;gap:10px 26px;margin:0 0 12px;color:var(--muted);font-size:16px">
+        <span>{{ p.role }}</span><span>{{ p.dates }}</span>
+      </div>
+      <div style="display:flex;flex-wrap:wrap;gap:14px 22px;font-size:16px">
+        <sc-for list="{{ p.links }}" as="l" hint-placeholder-count="1">
+          <a href="{{ l.href }}" target="_blank" rel="noopener">{{ l.label }} ↗</a>
+        </sc-for>
+      </div>
+    </article>
+
+    <div style="padding:clamp(32px,4.5vw,56px) clamp(20px,5vw,72px) 0;max-width:1400px;margin:0 auto">
+      <sc-if value="{{ p.hasCover }}" hint-placeholder-val="{{ false }}">
+        <div style="border-radius:10px;background:var(--accent-soft);display:grid;place-items:center;padding:clamp(24px,4vw,64px)">
+          {{ p.coverImg }}
+        </div>
+      </sc-if>
+      <sc-if value="{{ p.noCover }}" hint-placeholder-val="{{ true }}">
+        <div style="overflow:hidden;border-radius:10px;box-shadow:0 8px 30px rgba(20,22,26,.09);background:var(--ph)">
+          <div style="aspect-ratio:16/9;display:grid;place-items:center;background:repeating-linear-gradient(135deg,var(--ph) 0 12px,var(--ph-line) 12px 13px)">
+            <span style="font-family:'IBM Plex Mono',monospace;font-size:13px;color:var(--muted);background:var(--bg);padding:8px 14px;border-radius:4px;text-align:center">{{ p.coverFile }}</span>
+          </div>
+        </div>
+      </sc-if>
+    </div>
+
+    <div style="padding:clamp(48px,6vw,88px) clamp(20px,5vw,72px) 0;max-width:1400px;margin:0 auto">
+      <section style="max-width:68ch;margin-bottom:clamp(44px,5vw,72px);padding:clamp(24px,3vw,40px);border-radius:10px;background:var(--accent-soft)">
+        <h2 style="font-family:'Instrument Serif',Georgia,serif;font-weight:400;font-size:clamp(1.7rem,3.4vw,2.4rem);margin:0 0 16px">La question métier</h2>
+        <p style="margin:0;font-size:18px;line-height:1.65;text-wrap:pretty">{{ p.business }}</p>
+      </section>
+
+      <div style="display:flex;flex-direction:column;gap:clamp(36px,4.5vw,60px);max-width:68ch">
+        <section>
+          <h2 style="font-family:'Instrument Serif',Georgia,serif;font-weight:400;font-size:clamp(1.5rem,2.8vw,2rem);margin:0 0 12px">Les données</h2>
+          <p style="margin:0;color:var(--muted);font-size:17.5px;text-wrap:pretty">{{ p.data }}</p>
+        </section>
+        <section>
+          <h2 style="font-family:'Instrument Serif',Georgia,serif;font-weight:400;font-size:clamp(1.5rem,2.8vw,2rem);margin:0 0 12px">L'approche</h2>
+          <p style="margin:0;color:var(--muted);font-size:17.5px;text-wrap:pretty">{{ p.approach }}</p>
+        </section>
+        <section>
+          <h2 style="font-family:'Instrument Serif',Georgia,serif;font-weight:400;font-size:clamp(1.5rem,2.8vw,2rem);margin:0 0 12px">Le résultat</h2>
+          <p style="margin:0;color:var(--muted);font-size:17.5px;text-wrap:pretty">{{ p.result }}</p>
+        </section>
+        <sc-if value="{{ p.hasFeatures }}" hint-placeholder-val="{{ false }}">
+          <section>
+            <h2 style="font-family:'Instrument Serif',Georgia,serif;font-weight:400;font-size:clamp(1.5rem,2.8vw,2rem);margin:0 0 12px">Fonctionnalités de la version 1.0</h2>
+            <ul style="margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:10px;color:var(--muted);font-size:17.5px">
+              <sc-for list="{{ p.features }}" as="f" hint-placeholder-count="4">
+                <li style="display:flex;gap:12px"><span style="color:var(--accent)">—</span><span style="text-wrap:pretty">{{ f }}</span></li>
+              </sc-for>
+            </ul>
+          </section>
+        </sc-if>
+        <sc-if value="{{ p.note }}" hint-placeholder-val="{{ false }}">
+          <p style="margin:0;padding:14px 18px;border-left:2px solid var(--accent);font-family:'IBM Plex Mono',monospace;font-size:13.5px;line-height:1.6;color:var(--muted)">{{ p.note }}</p>
+        </sc-if>
+      </div>
+    </div>
+
+    <section style="padding:clamp(56px,7vw,96px) clamp(20px,5vw,72px) 0;max-width:1400px;margin:0 auto">
+      <h2 style="font-family:'IBM Plex Mono',monospace;font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:500;margin:0 0 32px;padding-bottom:14px;border-bottom:1px solid var(--line)">Captures</h2>
+      <div style="display:flex;flex-wrap:wrap;align-items:flex-start;gap:clamp(28px,4vw,56px)">
+        <sc-for list="{{ p.gallery }}" as="g" hint-placeholder-count="3">
+          <figure data-reveal="" style="margin:0;flex:0 1 {{ g.basis }};max-width:100%">
+            <sc-if value="{{ g.src }}" hint-placeholder-val="{{ false }}">
+              {{ g.img }}
+            </sc-if>
+            <sc-if value="{{ g.noSrc }}" hint-placeholder-val="{{ true }}">
+              <div style="overflow:hidden;border-radius:10px;box-shadow:0 6px 24px rgba(20,22,26,.08);background:var(--ph)">
+                <div style="aspect-ratio:{{ g.ratio }};display:grid;place-items:center;background:repeating-linear-gradient(135deg,var(--ph) 0 12px,var(--ph-line) 12px 13px)">
+                  <span style="font-family:'IBM Plex Mono',monospace;font-size:12.5px;color:var(--muted);background:var(--bg);padding:7px 12px;border-radius:4px;text-align:center">{{ g.file }}</span>
+                </div>
+              </div>
+            </sc-if>
+            <figcaption style="margin-top:14px;max-width:68ch;color:var(--muted);font-size:15.5px;text-wrap:pretty">{{ g.caption }}</figcaption>
+          </figure>
+        </sc-for>
+      </div>
+    </section>
+
+    <section style="padding:clamp(56px,7vw,96px) clamp(20px,5vw,72px) 0;max-width:1400px;margin:0 auto">
+      <div style="padding:clamp(24px,3vw,36px);border:1px solid var(--line);border-radius:10px;display:flex;flex-wrap:wrap;align-items:center;gap:14px 28px">
+        <span style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)">Stack</span>
+        <ul style="display:flex;flex-wrap:wrap;gap:10px;margin:0;padding:0;list-style:none">
+          <sc-for list="{{ p.stack }}" as="s" hint-placeholder-count="4">
+            <li style="padding:6px 13px;border-radius:4px;background:var(--accent-soft);color:var(--accent);font-family:'IBM Plex Mono',monospace;font-size:13px">{{ s }}</li>
+          </sc-for>
+        </ul>
+      </div>
+    </section>
+
+    <nav style="margin-top:clamp(64px,8vw,110px);padding:clamp(40px,5vw,64px) clamp(20px,5vw,72px);border-top:1px solid var(--line);background:var(--accent-soft)">
+      <div style="max-width:1400px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:32px">
+        <a href="{{ prevHref }}" style="text-decoration:none;color:inherit">
+          <p style="margin:0 0 8px;font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)">← Projet précédent</p>
+          <p style="margin:0;font-family:'Instrument Serif',Georgia,serif;font-size:1.5rem">{{ prevTitle }}</p>
+        </a>
+        <a href="{{ nextHref }}" style="text-decoration:none;color:inherit;text-align:right">
+          <p style="margin:0 0 8px;font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)">Projet suivant →</p>
+          <p style="margin:0;font-family:'Instrument Serif',Georgia,serif;font-size:1.5rem">{{ nextTitle }}</p>
+        </a>
+      </div>
+    </nav>
+  </main>
+  </sc-if>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;accent&quot;:{&quot;editor&quot;:&quot;color&quot;,&quot;default&quot;:&quot;#2F4B5C&quot;,&quot;options&quot;:[&quot;#2F4B5C&quot;,&quot;#2C4A3B&quot;,&quot;#4A3B2C&quot;],&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Direction artistique&quot;},&quot;defaultDark&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:false,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Direction artistique&quot;}}">
+// ————— CONTENUS DES PROJETS — modifiable sans toucher à la mise en page —————
+const PROJECTS = [
+  {
+    slug: "dashboard-rse-conformite",
+    title: "Dashboard RSE & conformité produits",
+    kicker: "Projet phare · ExNihilo",
+    role: "Analyst & Data Viz — mission freelance",
+    dates: "Févr. – oct. 2025",
+    links: [],
+    stack: ["Excel", "Power BI", "Zoho Analytics", "SQL"],
+    business: "La direction d'ExNihilo devait pouvoir répondre seule à deux questions : où en sommes-nous sur la conformité de notre catalogue produits, et quels indicateurs RSE pouvons-nous présenter sans réserve ? Chaque demande de chiffre passait alors par une extraction manuelle, ce qui rendait le suivi trop lent pour être utilisé en décision. L'objectif était donc de remplacer ces extractions par un suivi consultable en autonomie.",
+    data: "Données produits éparpillées entre plusieurs fichiers et sources, sans référentiel commun et non fiables au départ : doublons, libellés incohérents, champs de conformité incomplets. Le nettoyage a été mené sous Excel, avec une reprise ligne à ligne des cas ambigus et la définition de règles de normalisation réutilisables pour les mises à jour suivantes.",
+    approach: "Après le nettoyage, modélisation des données pour relier produits, référentiels et critères de conformité. Les indicateurs ont été choisis avec la direction, en partant de ses décisions réelles plutôt que de ce que la donnée permettait de calculer : taux de conformité par famille de produits, produits en attente de justificatif, indicateurs RSE présentables à des tiers. Restitution en deux temps, Power BI pour l'analyse détaillée et Zoho Analytics pour la lecture de pilotage.",
+    result: "La direction suit la conformité et les indicateurs RSE sans passer par un analyste, et arbitre directement les produits à traiter en priorité. Les règles de nettoyage restent documentées, ce qui permet de rafraîchir les dashboards sans refaire le travail de fiabilisation.",
+    note: "Données anonymisées : les captures présentées ne contiennent aucune donnée client réelle.",
+    cover: "images/dashboard-rse-conformite/cover.png",
+    coverW: 1410, coverH: 863, coverMax: "1100px",
+    coverAlt: "Dashboard Zoho Analytics : podium des candidats, résumé des taux de conformité et répartition conforme / non conforme sur les matières, le montage et les mesures.",
+    gallery: [
+      { src: "images/dashboard-rse-conformite/01.png", w: 1289, h: 726, caption: "Power BI, vue micro : santé générale des produits — nombre de produits évalués, taux d'attributs non conformes, score global et répartition des scores par candidat." },
+      { src: "images/dashboard-rse-conformite/02.png", w: 1287, h: 726, caption: "Power BI, vue macro : analyse par candidat, moyenne des scores selon la conformité évaluée et attributs notés à zéro." },
+      { src: "images/dashboard-rse-conformite/03.png", w: 1418, h: 794, caption: "Power BI : analyse globale des conformités des candidats, avec les observations qualitatives par matière et la note obtenue par candidat." },
+      { src: "images/dashboard-rse-conformite/04.png", w: 1418, h: 795, caption: "Power BI : analyse des retours fournisseurs — composition, poids et laize des matières, résistances et données techniques comparées." }
+    ]
+  },
+  {
+    slug: "decrochage-consulting",
+    title: "Décrochage Consulting",
+    kicker: "Projet de fin d'études",
+    role: "Analyse et développement",
+    dates: "2025 – 2026",
+    links: [{ label: "Voir la démo", href: "https://decrochage-consulting.streamlit.app" }],
+    stack: ["Python", "Machine Learning", "Streamlit"],
+    business: "Comment repérer assez tôt les élèves à risque de décrochage pour que les équipes pédagogiques puissent agir ? Le signal existe dans les données de suivi, mais il arrive généralement trop tard et sous une forme que des non-statisticiens ne peuvent pas exploiter. Le projet visait un scoring individuel lisible immédiatement par un référent pédagogique.",
+    data: "Données de suivi des élèves : assiduité, résultats, éléments de contexte scolaire. Travail de mise en cohérence des historiques, traitement des valeurs manquantes et cadrage de la période d'observation, afin que le score reste calculable sur des dossiers incomplets.",
+    approach: "Modèle de classification entraîné sur les parcours passés, puis sélection des variables les plus explicatives pour que chaque score puisse être justifié auprès d'un enseignant. La restitution a été conçue pour des non-statisticiens : un niveau de risque, les facteurs qui y contribuent, et rien d'autre à l'écran.",
+    result: "Une application web qui donne, élève par élève, un niveau de risque et ses causes probables. Les équipes pédagogiques disposent d'une base de discussion pour prioriser les entretiens de suivi, sans avoir à interpréter un modèle.",
+    note: "",
+    cover: "images/decrochage-consulting/cover.png",
+    coverW: 1735, coverH: 989, coverMax: "1100px",
+    coverAlt: "Vue d'ensemble de l'outil : nombre d'étudiants suivis, répartition par niveau de risque et risque moyen par programme et par année d'étude.",
+    gallery: [
+      { src: "images/decrochage-consulting/01.png", w: 1736, h: 992, caption: "Profil individuel : score de risque, actions recommandées et principaux facteurs détectés par le modèle, expliqués par les valeurs SHAP." },
+      { src: "images/decrochage-consulting/02.png", w: 1738, h: 990, caption: "Analyses : distribution des scores de risque avec les seuils modéré, élevé et critique, et corrélation du score avec les notes et les absences." },
+      { src: "images/decrochage-consulting/03.png", w: 1739, h: 989, caption: "Alertes : sélection des étudiants concernés et message généré automatiquement pour les équipes pédagogiques." }
+    ]
+  },
+  {
+    slug: "smart-care",
+    title: "Smart Care",
+    kicker: "Outil de pilotage hospitalier",
+    role: "Analyse, modélisation et restitution",
+    dates: "Projet académique",
+    links: [],
+    stack: ["Python", "Machine Learning", "Dataviz"],
+    business: "Comment anticiper les tensions sur les ressources d'un hôpital avant qu'elles ne deviennent visibles au guichet ? Un service qui découvre sa saturation le jour même ne peut que réagir. La question posée était celle d'un horizon de prévision suffisant pour redéployer lits et personnels à l'avance.",
+    data: "Historique d'admissions et de charge par service, complété d'éléments de saisonnalité. Le travail préalable a porté sur la granularité temporelle et sur le traitement des périodes atypiques, qui faussaient la lecture des tendances.",
+    approach: "Prévision des admissions à court terme, puis simulation d'allocation des ressources pour tester des scénarios de redéploiement. Les indicateurs retenus sont ceux qui déclenchent une décision : taux d'occupation projeté, écart aux capacités, services en tension. Le tout restitué dans une interface « cockpit » qui tient sur un seul écran.",
+    result: "Un prototype d'aide à la décision qui permet à un responsable de service de voir venir une tension et de tester un redéploiement avant de l'engager, plutôt que de constater la saturation.",
+    note: "",
+    cover: "images/smart-care/cover.png",
+    coverW: 1999, coverH: 1197, coverMax: "1100px",
+    coverAlt: "Interface Smart Care Analytics, onglet Flux : admissions, sorties, patients en attente et historique entrées / sorties du service des urgences.",
+    gallery: [
+      { src: "images/smart-care/01.png", w: 1999, h: 1219, caption: "Onglet Prédictions : calendrier de tension sur 14 jours et allocation prévisionnelle des lits, soignants et respirateurs." },
+      { src: "images/smart-care/02.png", w: 1384, h: 483, caption: "Analyse Python : admissions quotidiennes lissées sur 2020-2026, avec les périodes d'événements (COVID, épidémies, canicules, grèves) mises en évidence." },
+      { src: "images/smart-care/03.png", w: 1384, h: 484, caption: "Analyse Python : personnel et matériel disponibles les jours normaux comparés aux jours de pic (≥ P90), qui a servi à cadrer la simulation d'allocation." }
+    ]
+  },
+  {
+    slug: "ctrl-f",
+    title: "Ctrl+F",
+    kicker: "Veille tech automatisée",
+    role: "Conception et développement",
+    dates: "2025",
+    links: [{ label: "Voir la démo", href: "https://ctrl-f-two.vercel.app" }],
+    stack: ["Next.js", "IA générative", "Vercel"],
+    business: "Le temps passé à trier l'actualité tech est du temps qui n'est pas passé à l'analyser. La question était de réduire ce tri sans perdre en couverture : que faut-il automatiser pour qu'une veille quotidienne se lise en quelques minutes ?",
+    data: "Flux issus de sources sélectionnées, collectés en continu. La difficulté principale vient de la redondance, un même sujet revenant sous plusieurs titres et plusieurs formats, ainsi que de la qualité inégale des contenus récupérés.",
+    approach: "Chaîne de traitement en quatre temps : collecte, déduplication des sujets, résumé, puis catégorisation en quatre rubriques — Tech, Business Tech, Data & IA, UX. Le découpage en rubriques correspond aux usages de lecture, pas à la structure des sources.",
+    result: "Une plateforme où la veille se lit par rubrique, sans doublons et sans ouvrir chaque article pour savoir s'il mérite d'être lu. Le tri manuel disparaît, l'arbitrage de lecture reste à l'utilisateur.",
+    note: "",
+    cover: "images/ctrl-f/cover.png",
+    coverW: 1738, coverH: 988, coverMax: "1100px",
+    coverAlt: "Accueil de Ctrl+F : fil d'actualités en cartes, filtré par rubrique — Tous, Tech, Business Tech, Data & IA, UX.",
+    gallery: [
+      { src: "images/ctrl-f/01.png", w: 1735, h: 991, caption: "Gestion des sources : ajout d'un flux RSS, rattachement à un domaine, activation ou désactivation, avec le volume d'articles collectés et la date du dernier." },
+      { src: "images/ctrl-f/02.png", w: 1739, h: 989, caption: "Recherche transversale : un article, une source ou un mot-clé, sur l'ensemble du fil." }
+    ]
+  },
+  {
+    slug: "rosa",
+    title: "RoSa — Road Safety Application",
+    kicker: "Lead Dev & Data · équipe de 4",
+    role: "Lead Dev & Data — conception du modèle de données et pilotage technique",
+    dates: "Projet en équipe",
+    links: [{ label: "Voir le code", href: "https://github.com/Kess4/RoSa" }],
+    stack: ["React Native", "Expo", "PostgreSQL", "DBeaver"],
+    business: "Gestion des accidents : Les agents municipaux peuvent utiliser l'application pour gérer et reporter les différents accidents. Cela inclut la visualisation des zones accidentés sur une carte, la mise à jour de l'état des ces accidents et le traitement des informations enregistrés. L'application vise donc à simplifier le processus de déclaration et de gestion des accidents en fournissant une interface conviviale pour les agents municipaux.",
+    data: "Croisement de trois sources : historique d'accidents géolocalisé, météo et densité de trafic, complété par les incidents saisis dans l'application. L'enjeu a été de les rendre comparables dans le temps et l'espace, avec des maillages géographiques et des fréquences de mise à jour différents.",
+    approach: "Conception du modèle de données sous PostgreSQL pour supporter ce croisement, le stockage sécurisé des données critiques et les requêtes temps réel de l'application. L'évaluation du risque combine les trois sources sur la zone concernée, et la restitution passe par une carte interactive plutôt que par des tableaux, pour correspondre au travail de terrain des agents. Pilotage technique d'une équipe de 4.",
+    result: "Les agents municipaux déclarent, localisent et suivent l'état des accidents depuis une seule interface, au lieu de traiter les informations séparément de leur visualisation. Le processus de déclaration et de gestion est unifié, et les données restent exploitables pour identifier les zones à traiter en priorité.",
+    features: [
+      "Collecte des données d'incidents sur la route.",
+      "Évaluation du risque d'accident en temps réel.",
+      "Visualisation des incidents sur une carte interactive.",
+      "Intégration d'une base de données SQL pour le stockage sécurisé des données critiques."
+    ],
+    note: "",
+    cover: "images/rosa/cover.png",
+    coverW: 812, coverH: 710, coverMax: "820px",
+    coverAlt: "Trois écrans de l'application RoSa : carte des zones à risque, écran d'accueil et présentation du service.",
+    gallery: [
+      { src: "images/rosa/01.png", w: 694, h: 1198, basis: "300px", caption: "Carte interactive : accidents géolocalisés, regroupés par zone, avec le détail et l'indice de danger au clic." },
+      { src: "images/rosa/02.png", w: 886, h: 1704, basis: "300px", caption: "Formulaire de déclaration d'un accident : lieu, personnes impliquées, type de véhicule et de collision, météo." },
+      { src: "images/rosa/03.png", w: 694, h: 1198, basis: "300px", caption: "Suivi des activités : dossiers en cours et terminés, prévention, informations et travaux." }
+    ]
+  }
+];
+
+class Component extends DCLogic {
+  state = { slug: null, dark: false };
+
+  componentDidMount() {
+    this.sync = () => {
+      const h = String(window.location.hash || "");
+      const m = h.match(/^#\/projet\/([a-z0-9-]+)/i);
+      const slug = m ? m[1] : null;
+      if (slug !== this.state.slug) {
+        this.setState({ slug });
+        window.scrollTo(0, 0);
+      }
+      if (!slug && h && h !== "#accueil") {
+        const el = document.getElementById(h.slice(1));
+        if (el) requestAnimationFrame(() => el.scrollIntoView === undefined ? null : window.scrollTo({ top: el.getBoundingClientRect().top + window.scrollY - 80, behavior: "smooth" }));
+      }
+    };
+    window.addEventListener("hashchange", this.sync);
+    this.sync();
+
+    const dark = this.props.defaultDark ?? false;
+    this.applyTheme(dark);
+    this.setState({ dark });
+
+    this.io = new IntersectionObserver((entries) => {
+      entries.forEach((e) => { if (e.isIntersecting) { e.target.classList.add("is-in"); this.io.unobserve(e.target); } });
+    }, { rootMargin: "0px 0px -8% 0px", threshold: 0.05 });
+    this.scan = () => document.querySelectorAll("[data-reveal]:not(.is-in)").forEach((el) => this.io.observe(el));
+    this.scan();
+    this.rescan = setInterval(this.scan, 600);
+
+    this.hoverIn = (e) => { const c = e.target.closest("a"); const z = c && c.querySelector("[data-zoom]"); if (z) z.style.transform = "scale(1.03)"; };
+    this.hoverOut = (e) => { const c = e.target.closest("a"); const z = c && c.querySelector("[data-zoom]"); if (z) z.style.transform = "none"; };
+    document.addEventListener("mouseover", this.hoverIn);
+    document.addEventListener("mouseout", this.hoverOut);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener("hashchange", this.sync);
+    document.removeEventListener("mouseover", this.hoverIn);
+    document.removeEventListener("mouseout", this.hoverOut);
+    clearInterval(this.rescan);
+    if (this.io) this.io.disconnect();
+  }
+
+  applyTheme(dark) {
+    const root = document.documentElement;
+    const accent = this.props.accent ?? "#2F4B5C";
+    root.setAttribute("data-theme", dark ? "dark" : "light");
+    // En sombre, on éclaircit l'accent pour garder un contraste AA sur fond anthracite.
+    root.style.setProperty("--accent", dark ? "color-mix(in oklab, " + accent + " 38%, #FFFFFF)" : accent);
+  }
+
+  componentDidUpdate(prevProps) {
+    if (prevProps.accent !== this.props.accent) this.applyTheme(this.state.dark);
+  }
+
+  renderVals() {
+    const i = PROJECTS.findIndex((p) => p.slug === this.state.slug);
+    const p = i >= 0 ? PROJECTS[i] : null;
+    const prev = p ? PROJECTS[(i - 1 + PROJECTS.length) % PROJECTS.length] : null;
+    const next = p ? PROJECTS[(i + 1) % PROJECTS.length] : null;
+    const coverSize = i === 0 ? "1600×900" : "1200×900";
+    return {
+      accent: this.props.accent ?? "#2F4B5C",
+      isHome: !p,
+      isProject: !!p,
+      p: p ? Object.assign({}, p, {
+        coverFile: "/images/" + p.slug + "/cover.png · " + coverSize,
+        hasCover: !!p.cover,
+        noCover: !p.cover,
+        coverSrc: p.cover || "",
+        coverW: p.coverW || "", coverH: p.coverH || "",
+        coverMax: p.coverMax || "900px",
+        coverRatio: p.coverW && p.coverH ? p.coverW + " / " + p.coverH : "16 / 9",
+        coverImg: p.cover ? React.createElement("img", {
+          src: p.cover, alt: p.coverAlt || p.title, width: p.coverW, height: p.coverH,
+          loading: "eager", decoding: "async",
+          style: { display: "block", width: "100%", maxWidth: p.coverMax || "900px", height: "auto", aspectRatio: (p.coverW || 16) + " / " + (p.coverH || 9) }
+        }) : null,
+        gallery: p.gallery.map((g) => {
+          const it = Object.assign({ ratio: "8/5", basis: "100%", src: "", w: "", h: "" }, g);
+          it.noSrc = !it.src;
+          if (it.src && it.w && it.h) it.ratio = it.w + " / " + it.h;
+          it.img = it.src ? React.createElement("img", {
+            src: it.src, alt: it.caption, width: it.w, height: it.h,
+            loading: "eager", decoding: "async",
+            style: { display: "block", width: "100%", height: "auto", aspectRatio: it.ratio, borderRadius: "10px", boxShadow: "0 6px 24px rgba(20,22,26,.08)" }
+          }) : null;
+          return it;
+        }),
+        hasFeatures: !!(p.features && p.features.length)
+      }) : {},
+      prevHref: prev ? "#/projet/" + prev.slug : "#accueil",
+      prevTitle: prev ? prev.title : "",
+      nextHref: next ? "#/projet/" + next.slug : "#accueil",
+      nextTitle: next ? next.title : "",
+      themeLabel: this.state.dark ? "Clair" : "Sombre",
+      toggleTheme: () => {
+        const dark = !this.state.dark;
+        this.applyTheme(dark);
+        this.setState({ dark });
+      }
+    };
+  }
+}
+</script>
+</body>
+</html>
